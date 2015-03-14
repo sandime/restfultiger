@@ -19,4 +19,16 @@ angular.module('firstApp', [])
             nerdness: 5},
     ];
 
-});
+//info on our form
+        vm.computerData = {};
+        vm.addComputer = function() {
+// add a computer to the list
+            vm.computers.push({
+                name: vm.computerData.name,
+                color: vm.computerData.color,
+                nerdness: vm.computerData.nerdness
+            });
+// after our computer has been added, clear the form
+            vm.computerData = {};
+        };
+    });
